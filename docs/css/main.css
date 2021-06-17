@@ -276,6 +276,7 @@ li{
     .menu{
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
         font-size: 16px;
         padding: 0;
     }
@@ -503,7 +504,13 @@ li{
 }
 
 .rooms-buttons{
-    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .rooms-buttons span{
@@ -527,6 +534,12 @@ li{
 }
 
 @media (min-width: 1000px){
+    .rooms-buttons{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
     .rooms-parent{
         display: flex;
         flex-direction: row;
