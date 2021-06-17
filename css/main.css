@@ -1,0 +1,725 @@
+/* GLOBALES */
+
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+  html, body {
+    height:100%;
+    overflow:auto
+} 
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+:root{
+    --primary:#D33D90;
+    --secondary: #828282;
+    --tertiary: #9C115E;
+    --fourth: #72C7D8;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@media (min-width: 1280px){
+    a{
+        text-decoration: none;
+        color: var(--primary);
+    }
+}
+
+/*HEADER*/
+
+.bar{
+    display: none;
+}
+
+.social-media img{
+    margin-left: 2rem;
+    height: 1rem;
+}
+
+.social-and-search{
+   display: none;
+}
+
+.bar-parent{
+    display: none;
+}
+
+.whatsapp{
+    display: none;
+}
+
+.en{
+    display: none;
+}
+
+@media(min-width: 1280px){
+    .bar{
+        height: 40px;
+        width: 100%;
+        background-color: var(--primary);
+        display: block;
+        position: static;
+    }
+
+    .social-media img{
+        margin-left: 2rem;
+        height: 1rem;
+    }
+    
+    .social-media i{
+        color: white;
+        height: 1rem;
+        margin-left: 2rem;
+    }
+    
+    .social-and-search{
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        padding-right: 1rem;
+        align-items: center;
+    }
+    
+    .bar-parent{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(5px);
+    }
+    
+    .whatsapp,
+    .en,
+    .fa-search{
+        margin-right: 1.5rem;
+    }
+    
+    .whatsapp{
+        display: flex;
+        align-items: center;
+    }
+    
+    .whatsapp img{
+        height: 1rem;
+        margin-right: .2rem;
+    }
+    
+    .en{
+        height: 2rem;
+        width: 2rem;
+        border:  .25px solid rgba(255, 255, 255, .5);
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .en span{
+        position: absolute;
+    }
+    
+}
+
+
+
+/* LOGO */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.logo img{
+    transform: translateX(-15px);
+    width: 150px;
+} 
+
+@media(min-width: 1280px){
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        position: initial;
+    }
+
+    .logo img{
+        transform: translateX(-10px);
+        width: 250px;
+    } 
+}
+
+.background{
+    background: linear-gradient(180deg, #EFEFEC, #EFEFEC00), url('/images/home/Habitacion.png');
+    height: 80vh;
+    background-size: cover;
+    background-position: top center;
+    overflow: hidden;
+}
+
+
+
+
+/* MENU */
+
+/* responsive */
+
+nav{
+    /* display: none; */
+    z-index: 777;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    right: -100%;
+    transition: all .5s;
+    top: 0;
+    background: var(--primary);
+}
+
+ul{ 
+    list-style: none;
+}
+
+li{
+  margin: 2rem 0rem 0rem 1rem;
+}
+
+@media(min-width: 1280px){
+    nav{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: static;
+        list-style: none;
+        margin: 0 auto;
+        right: 0%;
+        background: none;
+        transition: all .5s;
+    }
+}
+
+#check{
+    display:none;
+}
+
+#check:checked ~ nav{
+    right: -10%;
+}
+
+/* #close{
+    display: none;
+}
+
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    font-size: 2rem;
+    color: white;
+    z-index: 999;
+}
+
+#close:checked ~ nav{
+    display: none;
+} */
+
+
+
+
+.btn-container{
+    height: 3rem;
+    width: 3rem;
+    background-color: rgba(255, 255, 255, .3);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    z-index: 999;
+}
+
+.menu-btn{
+    color: var(--primary);
+    font-size: 2rem;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+.menu-btn:hover{
+    cursor: pointer;
+}
+/* responsive */
+
+@media(min-width: 1280px){
+    .menu{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 16px;
+        padding: 0;
+    }
+    
+    .menu li{
+        list-style: none;
+        color: var(--primary);
+    }
+    
+    nav{
+        width: 100%;
+    }
+
+    .btn-container{
+        display: none;
+    }
+
+    .menu-btn{
+        display: none;
+    }
+}
+
+
+
+
+
+/* HERO */
+
+/*HEADER END*/
+
+/* INTRODUCTION BEGIN */
+.introduction-parent{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1rem;
+    position: relative;
+}
+
+.introduction-parent h1{
+    color: var(--primary);
+    position: relative;
+    margin-bottom: 1.3rem;
+}
+
+/* .introduction-parent h1::after{
+    content: '';
+    height: 5px;
+    width: 100px;
+    background-color: var(--primary);
+    display: block;
+    position: absolute;
+    left: calc(47% - 5px);
+    margin-top: 1rem;
+} */
+
+.line{
+    height: 5px;
+    width: 4rem;
+    background-color: var(--primary);
+    margin: 0 auto;
+}
+
+.introduction-parent p{
+    font-size: 1.2rem;
+    color: var(--secondary);
+    text-align: center;
+}
+/* INTRODUCTION END */
+
+/* SQUARE BEGINS */
+.square-parent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.square{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEFEC;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--tertiary);
+    font-weight: 600;
+}
+
+.square img{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 500px){
+    .square-parent{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .square{
+        height: 15rem;
+        width: 15rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #EFEFEC;
+        text-align: center;
+        margin: 0 auto;
+        color: var(--tertiary);
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1000px){
+    .square-parent{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .square{
+        height: 15rem;
+        width: 15rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #EFEFEC;
+        text-align: center;
+        margin: 0 auto;
+        color: var(--tertiary);
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1280px){
+    .square-parent{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .square{
+        height: 11rem;
+        width: 11rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #EFEFEC;
+        text-align: center;
+        margin: 0 auto;
+        color: var(--tertiary);
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1480px){
+    .square-parent{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .square{
+        height: 13rem;
+        width: 13rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #EFEFEC;
+        text-align: center;
+        margin: 0 auto;
+        color: var(--tertiary);
+        font-weight: 600;
+    }
+}
+/* SQUARE END */
+
+/* ROOMS BEGINS */
+
+.rooms-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.room{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    position: relative;
+    width: 350px;
+    margin-bottom: 3rem;
+}
+
+.room img{
+    height: 20rem;
+}
+
+.first-image img{
+    border-radius: 20px;
+}
+
+.room-description h2{
+    color: var(--primary);
+}
+
+.room-description p{
+    color: var(--secondary);
+}
+
+.rooms-buttons{
+    margin-top: 1rem;
+}
+
+.rooms-buttons span{
+    border: 1px solid var(--primary);
+    padding: 5px 30px 5px 30px;
+    border-radius: 20px;
+    margin: 0 1rem 1.3rem 0;
+}
+
+.rooms-buttons span:hover{
+    cursor: pointer;
+}
+
+.rooms-buttons span:first-of-type{
+    color: white;
+    background-color: var(--primary);
+}
+
+.rooms-buttons span:last-of-type{
+    color: var(--primary);
+}
+
+@media (min-width: 1000px){
+    .rooms-parent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 5rem;
+    }
+    .room{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        position: relative;
+        width: 500px;
+    }
+
+    .room img{
+        height: 24rem;
+    }
+}
+
+@media (min-width: 1365px){
+    
+    .room{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        position: relative;
+        width: 600px;
+    }
+
+    .room img{
+        height: 25rem;
+    }
+}
+
+/* ROOMS END */
+
+/* FOOTER BEGINS */
+
+footer{
+    background-color: #EFEFEC;
+    width: 100%;
+    height: 250px;
+    bottom: 0;
+    border-top: 2PX solid #439AAA;
+    position: relative;
+}
+
+.footer-parent{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+@media (min-width: 1150px){
+    .footer-parent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: initial;
+        margin-top: 3rem;
+    }
+}
+
+.footer-parent span{
+    color: var(--secondary);
+}
+
+.footer-parent h4{
+    color: var(--primary);
+
+}
+
+.logo-and-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo-and-social img{
+    height: 50px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons i{
+    color: var(--fourth);
+    margin: 30px 5px 0 0;
+    border: 1px solid var(--fourth);
+    padding: 10px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.sections{
+    display: none;
+    flex-direction: column;
+    align-items: left;
+}
+
+@media (min-width: 1150px){
+    .sections{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+}
+
+.grid-sections{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+
+}
+
+.grid-sections a{
+    color: var(--secondary);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.info{
+    display: none;
+}
+
+.contact{
+    display: none;
+}
+
+@media (min-width: 1150px){
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        max-width: 25%;
+    }
+    .contact{
+        display: block;
+    }
+}
+
+.location{
+    margin: 0 0 35px 0;
+    display: flex;
+    align-items: center;
+}
+
+.location i{
+    color: var(--fourth);
+    font-size: 20px;
+    margin: 0 15px 0px 0;
+}
+
+.phone i{
+    color: var(--fourth);
+    margin: 0 15px 10px 0;
+
+}
+
+.whatsapp-button{
+    display: inline;
+    color: white;
+    border: 1px solid #0DC143;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #0DC143;
+    right: 0;
+    top: 0;
+    transform: translate(-70px, -30px);
+}
+
+.whatsapp-button i{
+    font-size: 35px;
+    z-index: 9999;
+}
+
+
+/* FOOTER END */
