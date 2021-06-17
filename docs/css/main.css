@@ -167,7 +167,7 @@ a{
 }
 
 .background{
-    background: linear-gradient(180deg, #EFEFEC, #EFEFEC00), url('/images/home/Habitacion.png');
+    background: linear-gradient(180deg, #EFEFEC, #EFEFEC00), url('../images/home/Habitacion.png');
     height: 80vh;
     background-size: cover;
     background-position: top center;
